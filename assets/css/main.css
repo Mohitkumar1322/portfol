@@ -363,6 +363,7 @@ template {
     float: right
 }
 
+
 .fa.fa-pull-left {
     margin-right: .3em
 }
@@ -378,7 +379,77 @@ template {
 .fa.pull-left {
     margin-right: .3em
 }
-
+/* Styling the Certifications Section */
+#certifications {
+    padding: 20px 0;
+  }
+  
+  .user-certifications {
+    display: flex;
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    gap: 20px;  /* Space between items */
+    padding-bottom: 20px;  /* Space below the scroll */
+    scroll-behavior: smooth;  /* Smooth scrolling */
+  }
+  
+  .certification-item {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    flex-shrink: 0;  /* Prevents the item from shrinking */
+    width: 250px;  /* Set width of each item */
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .certification-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .certification-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .certification-text li {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  /* Optional: Styling for the scrollbar */
+  .user-certifications::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .user-certifications::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .user-certifications::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .certification-item {
+      width: 200px;
+    }
+  
+    .certification-img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
 .fa.pull-right {
     margin-left: .3em
 }
@@ -392,6 +463,70 @@ template {
     -webkit-animation: fa-spin 1s infinite steps(8);
     animation: fa-spin 1s infinite steps(8)
 }
+/* Styling the Achievements Section */
+.user-achievements {
+    display: flex;
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    gap: 30px;  /* Space between items */
+    padding-bottom: 20px;  /* Space below the scroll */
+  }
+  
+  .achievement-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;  /* Prevents the item from shrinking */
+    gap: 20px;
+    width: 250px;  /* Set width of each item */
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .achievement-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .achievement-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .achievement-text li {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Optional: Styling for the scrollbar */
+  .user-achievements::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .user-achievements::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .user-achievements::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .achievement-item {
+      width: 200px;
+    }
+  
+    .achievement-img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
 
 .fa-rotate-90 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
@@ -551,6 +686,89 @@ template {
 .fa-home:before {
     content: "\f015"
 }
+/* Experience Section */
+#experience {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  #experience .user-details h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .experience-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    gap: 30px;
+  }
+  
+  .experience-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience-card h3 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .experience-card h4 {
+    font-size: 18px;
+    color: #555;
+    font-weight: 400;
+  }
+  
+  .experience-duration {
+    font-size: 16px;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  .experience-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+  }
+  
+  .experience-card ul li {
+    margin: 5px 0;
+  }
+  
+  /* Make the experience section responsive */
+  @media (max-width: 768px) {
+    .experience-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .experience-card {
+      width: 90%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .experience-card {
+      width: 100%;
+    }
+  }
+  
 
 .fa-file-o:before {
     content: "\f016"
